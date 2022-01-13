@@ -37,14 +37,14 @@
   background-color: var(--primary-background-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .modal__& {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  }
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-  .modal__&:hover {
+  &:hover {
     fill: var(--accent-color);
   }
 }
@@ -113,25 +113,6 @@
     border: 1px solid var(--accent-color);
   }
 
-  &__input:focus + .&__input-icon {
-    fill: var(--accent-color);
-  }
-
-  .modal__form-message {
-    font-family: inherit;
-    resize: none;
-    height: 120px;
-    padding: 12px 16px;
-
-    &::placeholder {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.01em;
-      color: rgba(117, 117, 117, 0.5);
-    }
-  }
-
   &__input-icon {
     position: absolute;
     left: 10px;
@@ -140,19 +121,38 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .modal__policy-box {
+  &__input:focus + &__input-icon {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__form-message {
+  font-family: inherit;
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+
+  &::placeholder {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--secondary-text-color);
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
   }
+}
+
+.modal__policy-box {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-text-color);
 
   & a {
     color: var(--accent-color);
@@ -177,20 +177,6 @@
     background-origin: border-box;
     background-position: center;
   }
-}
-
-&__check-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-
-  border: 2px solid #212121;
-  background-color: var(--primary-background-color);
-  border-radius: 2px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__submit-btn {
@@ -223,4 +209,18 @@
     background-color: var(--order-button-background-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
+}
+
+.modal__check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid #212121;
+  background-color: var(--primary-background-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
